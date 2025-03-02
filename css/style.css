@@ -1,0 +1,279 @@
+/* General Styling */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.logo-img {
+  width: 50px;
+  /* Size of the image */
+  height: 50px;
+  /* Keep it equal to maintain a square aspect ratio */
+  border-radius: 15px;
+  /* Adjust for rounded corners */
+  object-fit: cover;
+  /* Ensures the image fits within the square frame */
+}
+/* Section Divider Style */
+.section-divider {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #007bff, #ffdd00);
+  margin: 20px auto;
+  border: none;
+  opacity: 0.8;
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Section Content */
+#hero {
+  background-color: #f8f9fa;
+}
+
+#courses {
+  background-color: #f8f9fa;
+}
+#events,
+#contact {
+  background-color: #fff;
+}
+
+#faculty,
+#newsletter,
+#about {
+  background-color: #f0f0f0;
+}
+
+/* Text Centering and Padding */
+.text-center {
+  text-align: center;
+}
+
+.py-5 {
+  padding: 3rem 0;
+}
+
+/* Optional: Responsive Styling */
+@media (max-width: 768px) {
+  .section-divider {
+    width: 80%;
+  }
+}
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.navbar-nav .nav-link.active {
+  color: #ffc107; /* Change this color to any preferred active color */
+}
+.hero {
+  color: #fff;
+  text-align: center;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-info i {
+  color: #f39c12;
+  font-size: 1.5rem;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* About Us Section */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.icon-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.icon-box i {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.icon-box:hover i {
+  color: #0056b3;
+}
+
+.icon-box p {
+  color: #555;
+  margin-top: 10px;
+}
+
+.course-card {
+  background-color: #f8f9fa;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.course-header i {
+  margin-right: 10px;
+}
+
+.collapse-icon {
+  color: #007bff;
+  transition: transform 0.3s;
+}
+
+.collapse-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.hero .carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* Animations */
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Newsletter Carousel Images */
+#newsletterCarousel .carousel-item img {
+  width: 100%; /* Ensures the image spans the width of its container */
+  max-height: 500px; /* Limits the maximum height */
+  object-fit: cover; /* Ensures the image fills its container while maintaining aspect ratio */
+  border-radius: 10px; /* Adds rounded corners for a polished look */
+  transition: transform 0.5s ease-in-out;
+}
+
+#newsletterCarousel .carousel-item.active img {
+  transform: perspective(400px) rotateY(0deg);
+}
+
+#newsletterCarousel .carousel-item-next img,
+#newsletterCarousel .carousel-item-prev img {
+  transform: perspective(400px) rotateY(30deg);
+}
+
+#newsletterCarousel .carousel-item-end img {
+  transform: perspective(400px) rotateY(-30deg);
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 768px) {
+  #newsletterCarousel .carousel-item img {
+    max-height: 300px; /* Reduce height for smaller devices */
+  }
+}
+
+/* Carousel Caption Styling */
+#newsletterCarousel .carousel-caption {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for text visibility */
+  padding: 10px 15px; /* Adds spacing around text */
+  border-radius: 5px; /* Rounds the corners of the caption box */
+}
+
+/* Headings and Text within the Caption */
+#newsletterCarousel .carousel-caption h5 {
+  font-size: 1.25rem; /* Adjusts heading size */
+  color: #fff; /* White text for contrast */
+  margin-bottom: 0.5rem;
+}
+
+#newsletterCarousel .carousel-caption p {
+  font-size: 1rem; /* Adjusts paragraph text size */
+  color: #ddd; /* Slightly muted white for description */
+}
